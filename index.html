@@ -14,15 +14,27 @@
         <section class="wrapper">
             <!-- La parte sinistra contenente tutte le chat -->
             <div class="contact-container">
-                <article class="my-self"></article>
+                <article class="my-self">
+                    <img src="./img/avatar_io.jpg" alt="">
+                </article>
                 <article class="notifications"></article>
                 <article class="search-bar"></article>
-                <article class="contact"></article>
+                <article class="contact" v-for="(element, index) in contacts">
+                    <img :src="element.avatar" alt="">
+                    <div class="contact-info">
+                        <p class="contact-name">{{ element.name}}</p>
+                        <span>Ultimo messaggio inviato</span>
+                    </div>
+                    <div class="time-contact">12.00</div>
+                </article>
             </div>
             <!-- La parte destra contenente le info del contatto selezionato con annessa chat -->
             <div class="chat-container">
                 <article class="selected-contact"></article>
-                <article class="contact-chat"></article>
+                <article class="contact-chat">
+                    <div class="sent-message"></div>
+                    <div class="received-message"></div>
+                </article>
                 <article class="text-side"></article>
             </div>
         </section>

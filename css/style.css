@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgb(151, 151, 151);
 
 }
 .wrapper{
@@ -20,16 +21,17 @@
 .contact-container{
     width: 35%;
     height: 100%;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
 }
 .chat-container{
     width: 65%;
     height: 100%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    border-left: 1px solid lightgray;
 }
-.my-self{
+.my-self, .selected-contact{
     height: 65px;
     width: 100%;
     background-color: #EAEAEA;
@@ -48,4 +50,54 @@
     height: 75px;
     width: 100%;
     border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.contact-info{
+    margin-left: 1rem;
+}
+.contact-name{
+    color: rgb(19, 19, 19);
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+.time-contact{
+    margin-left: auto;
+    margin-right: .5rem;
+}
+/* La parte destra contenente le info del contatto selezionato con annessa chat */
+.contact-chat{
+    background-image: url(/img/mine.jpg);
+    height: 86%;
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.sent-message{
+    height: 50px;
+    background-color: #D5F9BA;
+    width: 300px;
+    border-radius: .5rem;
+    align-self: flex-end;
+}
+.received-message{
+    height: 50px;
+    background-color: #FFFF;
+    width: 300px;
+    border-radius: .5rem;
+    align-self: flex-start;
+}
+
+
+
+.text-side{
+    background-color: #EAEAEA;
+    height: 62px;
 }
