@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Boolzapp</title>
+</head>
+<body>
+    <div id="app">
+        <section class="wrapper">
+            <!-- La parte sinistra contenente tutte le chat -->
+            <div class="contact-container">
+                <article class="my-self"></article>
+                <article class="notifications"></article>
+                <article class="search-bar"></article>
+                <article class="contact"></article>
+            </div>
+            <!-- La parte destra contenente le info del contatto selezionato con annessa chat -->
+            <div class="chat-container">
+                <article class="selected-contact"></article>
+                <article class="contact-chat"></article>
+                <article class="text-side"></article>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS and VUE script -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

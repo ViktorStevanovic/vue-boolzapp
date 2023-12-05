@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.wrapper{
+    width: 80%;
+    height: 900px;
+    margin-top: 2.5rem;
+    display: flex;
+    border: 1px solid lightgray;
+}
+/* La parte sinistra contenente tutte le chat */
+.contact-container{
+    width: 35%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+.chat-container{
+    width: 65%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.my-self{
+    height: 65px;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+.notifications{
+    height: 80px;
+    width: 100%;
+    background-color: #8EDAFC;
+}
+.search-bar{
+    height: 50px;
+    width: 100%;
+    background-color: #ffff;
+}
+.contact{
+    height: 75px;
+    width: 100%;
+    border: 1px solid lightgray;
+}
