@@ -40,7 +40,9 @@
                 <!-- Chat section -->
                 <article class="contact-chat">
                     <div class="messages" v-for="(element,index) in contacts[activeChat].messages">
-                        {{element.message}}
+                        <div class="single-message" :class= "(element.status == 'sent') ? 'sent' : 'received' ">
+                            {{element.message}}
+                        </div>
                     </div>
                     
                 </article>

@@ -83,18 +83,20 @@ img{
 .messages{
     display: flex;
     flex-direction: column;
+    
+}
+.single-message{
     height: 50px;
-    background-color: #D5F9BA;
+    /* background-color: #D5F9BA; */
     width: 300px;
     border-radius: .5rem;
     margin: .5rem 0;
-
 }
-.sent-message{
+.sent{
     background-color: #D5F9BA;
     align-self: flex-end;
 }
-.received-message{
+.received{
     background-color: #FFFF;
     align-self: flex-start;
 }
