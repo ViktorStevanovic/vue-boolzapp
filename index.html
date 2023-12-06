@@ -23,7 +23,7 @@
                     <img :src="element.avatar" alt="">
                     <div class="contact-info">
                         <p class="contact-name">{{element.name}}</p>
-                        <span>Ultimo messaggio inviato</span>
+                        <span>{{element.messages[0].message}}</span>
                     </div>
                     <div class="time-contact">12.00</div>
                 </article>
@@ -34,7 +34,7 @@
                     <img :src="contacts[activeChat].avatar" alt="">
                     <div class="contact-info">
                         <p class="contact-name">{{contacts[activeChat].name}}</p>
-                        <span>Ultimo messaggio inviato</span>
+                        <span></span>
                     </div>
                 </article>
                 <!-- Chat section -->
@@ -47,7 +47,11 @@
                     
                 </article>
                 
-                <article class="text-side"></article>
+                <article class="text-side">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" v-model="myMessage" @keyup.enter="newMessage(myMessage)">
+                    <i class="fa-solid fa-microphone"></i>
+                </article>
             </div>
         </section>
     </div>
