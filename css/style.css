@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(167, 167, 167);
+    color: rgb(100, 100, 100);
 
 }
 .wrapper{
@@ -35,11 +35,34 @@
     height: 65px;
     width: 100%;
     background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-icons{
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
 }
 .notifications{
     height: 80px;
     width: 100%;
     background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.notifications i{
+    color: white;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+.notifications p{
+    font-size: 1.05rem;
+    color: darkslategray;
+}
+.notifications span{
+    text-decoration: underline;
 }
 .search-bar{
     height: 50px;
@@ -49,7 +72,7 @@
 .contact{
     height: 75px;
     width: 100%;
-    border: 1px solid lightgray;
+    border-top: .5px solid lightgray;
     display: flex;
     align-items: center;
 }
@@ -65,7 +88,7 @@ img{
     padding-top: .5rem;
 }
 .contact-name{
-    color: rgb(110, 110, 110);
+    color: rgb(41, 41, 41);
     font-size: 1.2rem;
     margin-bottom: 2px;
 }
@@ -77,13 +100,14 @@ img{
 .contact-chat{
     background-image: url(/img/mine.jpg);
     height: 86%;
-    padding: 1rem 2.5rem;
-    
+    padding: 1rem 2.5rem;  
+}
+.selected-contact > .contact-info{
+    margin-right: auto;
 }
 .messages{
     display: flex;
     flex-direction: column;
-    
 }
 .single-message{
     /* height: 50px; */
@@ -128,5 +152,5 @@ img{
 }
 
 .active{
-    background-color: gray;
+    background-color: rgb(238, 238, 238);
 }

@@ -16,8 +16,19 @@
             <div class="contact-container">
                 <article class="my-self">
                     <img src="./img/avatar_io.jpg" alt="">
+                    <div class="my-icons">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </article>
-                <article class="notifications"></article>
+                <article class="notifications">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="enable-notifications">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <span>Attiva notifiche desktop</span>
+                    </div>
+                </article>
                 <article class="search-bar"></article>
                 <article class="contact" v-for="(element, index) in contacts" @click="selectChat(index)" :class= "(index === activeChat) ? 'active' : '' ">
                     <img :src="element.avatar" alt="">
@@ -34,7 +45,12 @@
                     <img :src="contacts[activeChat].avatar" alt="">
                     <div class="contact-info">
                         <p class="contact-name">{{contacts[activeChat].name}}</p>
-                        <span></span>
+                        <span>Ultimo accesso oggi alle</span>
+                    </div>
+                    <div class="my-icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </article>
                 <!-- Chat section -->
