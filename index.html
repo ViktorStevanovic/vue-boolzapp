@@ -22,7 +22,7 @@
                 <article class="contact" v-for="(element, index) in contacts" @click="selectChat(index)" :class= "(index === activeChat) ? 'active' : '' ">
                     <img :src="element.avatar" alt="">
                     <div class="contact-info">
-                        <p class="contact-name">{{ element.name}}</p>
+                        <p class="contact-name">{{element.name}}</p>
                         <span>Ultimo messaggio inviato</span>
                     </div>
                     <div class="time-contact">12.00</div>
@@ -30,11 +30,19 @@
             </div>
             <!-- La parte destra contenente le info del contatto selezionato con annessa chat -->
             <div class="chat-container">
-                <article class="selected-contact"></article>
+                <article class="selected-contact">
+                    <img :src="contacts[activeChat].avatar" alt="">
+                    <div class="contact-info">
+                        <p class="contact-name">{{contacts[activeChat].name}}</p>
+                        <span>Ultimo messaggio inviato</span>
+                    </div>
+                </article>
                 <!-- Chat section -->
                 <article class="contact-chat">
-                    <div class="sent-message"></div>
-                    <div class="received-message"></div>
+                    <div class="messages" v-for="(element,index) in contacts[activeChat].messages">
+                        {{element.message}}
+                    </div>
+                    
                 </article>
                 
                 <article class="text-side"></article>

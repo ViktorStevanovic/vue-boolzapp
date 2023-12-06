@@ -77,26 +77,30 @@ img{
 .contact-chat{
     background-image: url(/img/mine.jpg);
     height: 86%;
-    padding: 4rem 5rem;
+    padding: 1rem 4rem;
+    
+}
+.messages{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-}
-.sent-message{
     height: 50px;
     background-color: #D5F9BA;
     width: 300px;
     border-radius: .5rem;
+    margin: .5rem 0;
+
+}
+.sent-message{
+    background-color: #D5F9BA;
     align-self: flex-end;
 }
 .received-message{
-    height: 50px;
     background-color: #FFFF;
-    width: 300px;
-    border-radius: .5rem;
     align-self: flex-start;
 }
-
+.selected-contact{
+    display: flex;
+}
 
 
 .text-side{

@@ -8,7 +8,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -172,9 +172,10 @@ createApp({
     }, 
     methods: {
         selectChat(index){
-            // this.contacts[index].visible = !this.contacts[index].visible;
-            this.activeChat = index
-                       
+            this.activeChat = index;
+            for (let i= 0; i < this.contacts.length; i++) {
+                this.contacts[i].visible = i === index;
+            }
         },
     },
 
