@@ -22,6 +22,7 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </article>
+                <!-- Sezione Notifiche -->
                 <article class="notifications">
                     <i class="fa-solid fa-bell-slash"></i>
                     <div class="enable-notifications">
@@ -29,8 +30,14 @@
                         <span>Attiva notifiche desktop</span>
                     </div>
                 </article>
-                <article class="search-bar"></article>
-                <article class="contact" v-for="(element, index) in contacts" @click="selectChat(index)" :class= "(index === activeChat) ? 'active' : '' ">
+                <!-- Sezione ricerca chat -->
+                <article class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" v-model="searchContact" placeholder="">
+                    
+                </article>
+                <!-- Sezione di tutti i contatti -->
+                <article class="contact" v-for="(element, index) in filteredContact" @click="selectChat(index)" :class= "(index === activeChat) ? 'active' : '' ">
                     <img :src="element.avatar" alt="">
                     <div class="contact-info">
                         <p class="contact-name">{{element.name}}</p>
@@ -59,10 +66,9 @@
                         <div class="single-message" :class= "(element.status == 'sent') ? 'sent' : 'received' ">
                             {{element.message}}
                         </div>
-                    </div>
-                    
+                    </div>                  
                 </article>
-                
+                <!-- Sezione della scrittura del messaggio -->
                 <article class="text-side">
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" v-model="myMessage" @keyup.enter="newMessage(myMessage)">

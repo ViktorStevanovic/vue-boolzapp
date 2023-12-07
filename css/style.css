@@ -68,6 +68,26 @@
     height: 50px;
     width: 100%;
     background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search-icon{
+    height: 100%;
+    width: 50px;
+}
+.search-bar input{
+    width: 95%;
+    height: 80%;
+    border: 1px solid lightgray;
+    border-radius: .5rem;  
+}
+.search-bar i{
+    position: absolute;
+    left: 1.5rem;
+    color: rgb(188, 188, 188);
+    margin-right: 2rem;
 }
 .contact{
     height: 75px;

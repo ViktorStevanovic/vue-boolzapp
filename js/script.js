@@ -5,6 +5,7 @@ createApp({
         return {
             activeChat: 0,
             myMessage:'',
+            searchContact:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -175,7 +176,7 @@ createApp({
         selectChat(index){
             this.activeChat = index;
             for (let i= 0; i < this.contacts.length; i++) {
-                this.contacts[i].visible = i === index;
+                // this.contacts[i].visible = i === index;
             }
         },
         answerMessage(){
@@ -198,5 +199,10 @@ createApp({
         lastMessage(){
         }
     },
+    computed:{
+        filteredContact(){
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()))
+        },
+    }
 
 }).mount('#app');
